@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+exec rerun -bcqx --no-notify -- bundle exec rake

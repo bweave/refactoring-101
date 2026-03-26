@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+dir="$(cd "$(dirname "$0")/.." && pwd)"
+exec npx @marp-team/marp-cli --preview --watch "$dir/slides.md"

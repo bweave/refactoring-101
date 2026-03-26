@@ -1,0 +1,30 @@
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+  syntax_tree: config/rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+
+#######
+# Keep Layout/LineLength in sync with .streerc --print-width
+#######
+
+Layout/LineLength:
+  Max: 100
+
+#######
+# Cops that conflict with syntax_tree — let syntax_tree win
+#######
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/QuotedSymbols:
+  Enabled: false
