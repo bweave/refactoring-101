@@ -11,6 +11,17 @@ Learn SOLID principles through hands-on refactoring of an event registration sys
 
 ## Setup
 
+With [devbox](https://www.jetify.com/devbox) (recommended -- handles Ruby and
+gems for you):
+
+```bash
+git clone https://github.com/bweave/refactoring-101.git
+cd refactoring-101
+devbox shell
+```
+
+Or with your own Ruby 3.3 install:
+
 ```bash
 git clone https://github.com/bweave/refactoring-101.git
 cd refactoring-101
