@@ -11,12 +11,19 @@ Learn SOLID principles through hands-on refactoring of an event registration sys
 
 ## Setup
 
-With [devbox](https://www.jetify.com/devbox) (recommended -- handles Ruby and
-gems for you):
+With [devbox](https://www.jetify.com/devbox) and
+[direnv](https://direnv.net) (recommended -- handles Ruby and gems for you,
+and auto-activates the environment whenever you `cd` into the directory):
 
 ```bash
 git clone https://github.com/bweave/refactoring-101.git
 cd refactoring-101
+direnv allow  # first time only; devbox installs Ruby + runs bundle install
+```
+
+Without direnv, drop into the devbox shell manually:
+
+```bash
 devbox shell
 ```
 
