@@ -1,2 +1,4 @@
 .claude/settings.local.json
 .devbox/
+/.bundle/
+/vendor/bundle/
