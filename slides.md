@@ -3,10 +3,14 @@ marp: true
 theme: default
 style: |
   :root {
-    --accent-color: #4a90e2;
+    --accent-color: #facc15;
   }
   section {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-image: url('bg-blue-purple.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
   }
   section.lead h1 {
     font-size: 2.5em;
@@ -14,27 +18,27 @@ style: |
   section.lead h2 {
     font-weight: normal;
     font-size: 1.2em;
-    color: #666;
   }
   section.lead h3 {
     font-weight: normal;
     font-size: 1em;
-    color: #888;
   }
   blockquote {
     border-left: 4px solid var(--accent-color);
     padding: 0.5em 1em;
-    color: #333;
+    color: #ffffff;
     font-style: italic;
   }
   h1 {
-    color: #1a1a2e;
+    color: #ffffff;
   }
-  strong {
+  strong,
+  h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     color: var(--accent-color);
   }
   code {
-    background: #f0f0f0;
+    background: #ffffff;
+    color: #222222;
     padding: 0.1em 0.3em;
     border-radius: 3px;
   }
@@ -57,6 +61,8 @@ style: |
 
 ---
 
+<!-- _class: lead -->
+
 # What is refactoring?
 
 ---
@@ -76,11 +82,9 @@ Refactoring does not change ***what*** the code does -- only ***how*** it does i
 
 ---
 
-<!-- _class: lead -->
-
 # Repeat after me...
 
-## Refactoring does not change ***what*** the code does -- only ***how*** it does it.
+Refactoring does not change ***what*** the code does -- only ***how*** it does it.
 
 ---
 
@@ -120,15 +124,11 @@ Refactoring and features/fixes **do not belong in the same commit**.
 
 ---
 
-<!-- _class: lead -->
-
 # Repeat after me...
 
-## Make the change easy, ***then*** make the easy change.
+Make the change easy, ***then*** make the easy change.
 
 ---
-
-<!-- class: lead -->
 
 # For real, tho, how do we refactor?
 
@@ -139,8 +139,7 @@ Refactoring and features/fixes **do not belong in the same commit**.
 
 # The Flocking Rules
 
-Small, mechanical steps that guide a refactor
-without needing a grand plan up front.
+Small, mechanical steps that guide a refactor without needing a grand plan up front.
 
 1. Select the things that are **most alike**.
 2. Find the **smallest difference** between them.
@@ -182,6 +181,7 @@ that's the code begging for this principle.
 
 **Polymorphism** is the tool. Instead of adding another `case` branch,
 add a new type that answers the same message.
+
 The existing code stays closed; the system becomes open.
 
 ---
@@ -197,8 +197,6 @@ before it can use it, that's your code begging for this principle.
 
 **L** says "when you do, subtypes had better actually behave like their parent."
 
-They're a working pair.
-
 ---
 
 # **I** -- Interface Segregation
@@ -207,8 +205,8 @@ Keep interfaces focused.
 
 Don't hand someone a **Swiss Army knife** when they only need **scissors**.
 
- A class that sends emails shouldn't have to know anything about SMS,
- even if they live in the same notification system today.
+ A class that sends email shouldn't have to know anything
+ about SMS, even if they live in the same notification system today.
 
 ---
 
@@ -219,22 +217,18 @@ High-level code shouldn't depend on specific implementations.
 Pass your dependencies in, and the code becomes flexible
 enough to handle things you haven't thought of yet.
 
-Don't **hardwire your lamp** to the house. Use a **plug** so you can swap it.
+Don't **hardwire your lamp** to the house.
+Use a **plug** so you can swap it.
 
 ---
 
 # The workshop
 
-You'll work through six exercises in a single Ruby codebase.
-The exercises map to the principles we just covered.
-
-**Safety-net tests** prove you haven't broken anything.
-**Exercise tests** (skipped) tell you what to build next.
-Remove `skip`, refactor, make it pass. Repeat.
-
-1. Safety-net tests must **always** pass -- if they break, back up.
-2. Work through exercises **in order** -- each builds on the last.
-3. No solutions are provided -- **the journey is the point.**
+- Six exercises in a single Ruby codebase, mapped to the SOLID principles.
+- **Safety-net tests** must always pass -- if they break, back up.
+- **Exercise tests** are skipped. Remove `skip`, refactor, make them pass.
+- Work the exercises **in order** -- each builds on the last.
+- No solutions are provided -- **the journey is the point.**
 
 ---
 
@@ -255,12 +249,9 @@ You build skills through **repetition**, not reading.
 
 # Let's go!
 
-**Pair up** -- or form a group of three.
-You'll learn more from talking through the refactors than doing them alone.
-
 ```
-git clone https://github.com/bweave/refactoring-101
-cd refactoring-101
-bundle install
-bin/watch
+$ git clone https://github.com/bweave/refactoring-101
+$ cd refactoring-101
+$ bundle install
+$ bin/watch
 ```
