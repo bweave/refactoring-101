@@ -25,6 +25,18 @@ require_relative "test_helper"
 # capacity, notifications go to email + SMS, and the cancellation policy is
 # "50% refund". No existing class needs to change.
 #
+# HINT: The event hash still holds capacity and registered counts. Does the
+# event type object need its own state, or can each method just receive what
+# it needs?
+#
+# HINT: Safety-net tests read `event_report(...)[:event_type]` and expect a
+# Symbol. If you replace the symbol with an object, what breaks? What's the
+# smallest change that keeps both worlds happy?
+#
+# HINT: Retreat's cancellation message mentions the refund amount. Can a
+# single plain-String policy carry that, or does the method need more
+# information to do its job?
+#
 # =============================================================================
 
 class OpenClosedTest < Minitest::Test

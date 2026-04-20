@@ -29,7 +29,7 @@ class DependencyInversionTest < Minitest::Test
   # -- Group discount kicks in after 5 registrations --------------------------
 
   def test_group_discount_applied_after_five_registrations
-    skip "Phase 3: Inject a group discount calculator -- 10% off when registered_count > 5"
+    skip "Inject a group discount calculator -- 10% off when registered_count > 5"
 
     group_discount_calculator = Object.new
     def group_discount_calculator.calculate(event)
@@ -52,7 +52,7 @@ class DependencyInversionTest < Minitest::Test
   # -- First five registrations get regular price -----------------------------
 
   def test_first_five_registrations_get_regular_price
-    skip "Phase 3: The first 5 registrations are not discounted"
+    skip "The first 5 registrations are not discounted"
 
     group_discount_calculator = Object.new
     def group_discount_calculator.calculate(event)
@@ -75,7 +75,7 @@ class DependencyInversionTest < Minitest::Test
   # -- Injected notifier replaces the default ---------------------------------
 
   def test_injected_notifier_replaces_default
-    skip "Phase 3: Inject notifiers -- polymorphic dispatch replaces the case statement"
+    skip "Inject notifiers -- polymorphic dispatch replaces the case statement"
 
     injected_email = EmailNotifier.new
 
@@ -90,7 +90,7 @@ class DependencyInversionTest < Minitest::Test
   # -- Default behavior is unchanged ------------------------------------------
 
   def test_default_behavior_unchanged
-    skip "Phase 3: RegistrationSystem.new with no args still uses sensible defaults"
+    skip "RegistrationSystem.new with no args still uses sensible defaults"
 
     system = RegistrationSystem.new
     system.create_event("Workshop", :workshop, 10, 50, 35)

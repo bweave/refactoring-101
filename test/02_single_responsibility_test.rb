@@ -31,6 +31,15 @@ require_relative "test_helper"
 # Now make the easy change: capacity_report belongs in ReportGenerator, and
 # RegistrationSystem delegates to it. Done.
 #
+# HINT: Once Notifier owns the notifications, where does `system.notifications_sent`
+# get its data from? Safety-net tests still read it.
+#
+# HINT: What state does each new class actually need? Some need nothing;
+# others need to see data that currently lives on RegistrationSystem.
+#
+# HINT: Who creates these collaborators, and when? (Don't overthink it --
+# exercise 06 will revisit this.)
+#
 # =============================================================================
 
 class SingleResponsibilityTest < Minitest::Test
