@@ -63,18 +63,40 @@ style: |
 
 <!-- _class: lead -->
 
+# Have you ever looked at some code, and thought, "***gross!***"?
+
+## What is your **gut** is telling you?
+
+## Can you describe it? Can you **name** it?
+
+## How can you make it **better**?
+
+---
+
+<!-- _class: lead -->
+
+# Welcome to **Refactoring 101**
+
+---
+
+<!-- _class: lead -->
+
 # What is refactoring?
 
 ---
+
+<!-- _class: lead -->
 
 # Refactoring is...
 
 **Improving the structure of existing code without changing what it does.**
 
 Think: rearranging the furniture.
-Same room, same purpose -- easier to live in.
+Same room, same purpose -- **easier** to live in.
 
 ---
+
+<!-- _class: lead -->
 
 # The important part
 
@@ -82,13 +104,17 @@ Refactoring does not change ***what*** the code does -- only ***how*** it does i
 
 ---
 
+<!-- _class: lead -->
+
 # Repeat after me...
 
 Refactoring does not change ***what*** the code does -- only ***how*** it does it.
 
 ---
 
-# When we refactor
+<!-- _class: lead -->
+
+# When we refactor:
 
 - We use the same inputs.
 - We get the same outputs.
@@ -97,7 +123,7 @@ Refactoring does not change ***what*** the code does -- only ***how*** it does i
 
 ---
 
-# What does **better** code organization mean?
+# But what does **better** code organization mean?
 
 > "Your application needs to work right now just once;
 > it must be easy to change forever."
@@ -109,6 +135,8 @@ Refactoring is how we keep the cost of change low.
 Ignore it long enough and every small change becomes a big, risky project.
 
 ---
+
+<!-- _class: lead -->
 
 # How do we refactor?
 
@@ -124,11 +152,15 @@ Refactoring and features/fixes **do not belong in the same commit**.
 
 ---
 
+<!-- _class: lead -->
+
 # Repeat after me...
 
 Make the change easy, ***then*** make the easy change.
 
 ---
+
+<!-- _class: lead -->
 
 # For real, tho, how do we refactor?
 
