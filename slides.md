@@ -287,3 +287,10 @@ $ cd refactoring-101
 $ bundle install
 $ bin/watch
 ```
+---
+
+<!-- _class: lead -->
+
+# Thank you!
+
+Keep the conversation going in **#2026-summit-discuss-refactoring-101**
